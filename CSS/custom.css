@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.display-on {
+    display: block;
+}
+.display-off {
+    display: none;
+}
+.container {
+    background: rgb(22, 22, 22);
+    width: 100vw;
+    height: 100vh;
+    /* border: 1px dotted orange; */
+}
+/* MAIN /////////////////////////////////*/
+
+h1 {
+    font-family: 'Nosifer', regular;
+    font-size: 6rem;
+    color: rgb(235, 235, 235);
+}
+#index-text {
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    margin-top: 30px;
+}
+#index-img {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: -5px;
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+    /*  border: 1px dotted rgb(238, 227, 227); */
+}
+#index-img img {
+    width: 80vw;
+    bottom: 0;
+}
+
+ /* INTRO /////////////////////////////////*/
+
+ h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: rgb(235, 235, 235);
+}
+.paragraph {
+    position: absolute;
+    left: 55%;
+    padding-right: 1%;
+    margin-top: 5%;
+}
+#instructions-img img {
+     height: 90vh;
+     bottom: 0;
+     position: absolute;
+ }
+
+ /* STAGE /////////////////////////////////*/
+
+ .stage-container {
+     width: 100vw;
+     height: 100vh;
+     border: 1px dotted black;
+ }
+ #interface {
+     width: 100%;
+     height: 15vh;
+     position: absolute;
+     bottom: 500;
+     background-color: red;
+     border: 1px dotted black;
+ }
+ 
