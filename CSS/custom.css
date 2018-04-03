@@ -3,17 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    display: none;
+}
 .display-on {
     display: block;
+    transition: all 2s linear;
 }
 .display-off {
     display: none;
 }
 .container {
-    background: rgb(22, 22, 22);
+    background: rgb(22,22,22);
     width: 100vw;
     height: 100vh;
     /* border: 1px dotted orange; */
+}
+.next {
+    position: absolute;
+    top: 80%;
+    left: 89%;
+}
+.next img {
+    width: 100px;
 }
 /* MAIN /////////////////////////////////*/
 
@@ -46,35 +58,146 @@ h1 {
 
  h2 {
     font-family: 'Press Start 2P', cursive;
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 3.5rem;
     color: rgb(235, 235, 235);
-}
+   
+  }
 .paragraph {
     position: absolute;
-    left: 55%;
-    padding-right: 1%;
-    margin-top: 5%;
+    left: 50%;
+    padding-right: 2%;
+    margin-top: 5%;  
 }
 #instructions-img img {
      height: 90vh;
      bottom: 0;
      position: absolute;
- }
+}
 
  /* STAGE /////////////////////////////////*/
 
  .stage-container {
      width: 100vw;
-     height: 100vh;
-     border: 1px dotted black;
+     height: 100vh; 
+     position: relative; 
  }
  #interface {
      width: 100%;
      height: 15vh;
      position: absolute;
-     bottom: 500;
      background-color: red;
-     border: 1px dotted black;
  }
- 
+ .background  {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100vw;
+ }
+ .background img {
+     width: 100%;
+ }
+
+ /* KEKOS */
+ .character {
+     position: absolute;
+ }
+ .caco {
+    background: url(../images/caco.png);
+     background-size: contain;
+     background-repeat: no-repeat;
+ }
+ .police {
+    background: url(../images/police.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+ }
+ #character1 {
+    top: 480px;
+    left: 335px;
+    width:3vw;
+    height: 15vh;
+ }
+
+ #character2 {
+    top: 200px;
+    left: 550px;
+    width:4vw;
+    height: 20vh;
+ }
+ #character3{
+    top: 450px;
+    left: 700px;
+    width:4vw;
+    height: 18vh;
+ }
+ #character4 {
+    top: 465px;
+    left: 865px;
+    width:4vw;
+    height: 19vh;
+ }
+ #character5 {
+    top: 475px;
+    left: 1110px;
+    width:4vw;
+    height: 14vh;
+ }
+ #background-back {
+     z-index: 0;
+ }
+ #background-front {
+     z-index: 2;
+ }
+ .character {
+     z-index: 1;
+ }
+ .weapon {
+     z-index: 4;
+     position: absolute;
+     margin: 0 auto;
+ }
+ .reload {
+     display: none;
+ }
+ #main-weapon {
+    left: calc(50% - 96px);
+    top: calc(100% - 180px);
+ }
+ #main-weapon2 {
+    left: calc(50% - 158px);
+    top: calc(100% - 370px);
+ }
+ #main-weapon3 {
+    left: calc(50% - 136.5px);
+    top: calc(100% - 460px);
+ }
+ #main-weapon4 {
+    left: calc(50% - 172px);
+    top: calc(100% - 400px);
+ }
+ /* canvas {
+     border: 1px dotted white;
+ }
+ #canvas-container {
+     display: flex;
+     align-content: center;
+     justify-content: center;
+     flex-direction: column;
+ }
+ .test-sub-canvas {
+     position: absolute;
+     width: 100%;
+     height: 100px;
+     background-color: darkgrey;
+     top: 87%;
+} */
+/* L/M/1/2X -> PORTADA - INTRO - DOOM/KEKOS/BACKGROUNDS
+1.BACKGROUND Y KEKOS
+2.DOOM
+3.ESTILOS PARA EL CAVAS
+4.REFINAR PORTADA, INTRO Y PUNTOS 1 Y 2
+
+   1/2X/J/V -> CANVAS
+
+*/
