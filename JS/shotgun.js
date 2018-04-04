@@ -1,3 +1,4 @@
-function Shotgun(game) {
-    
-}
+// function Shotgun(game) {
+//     this.game = game;
+// };
+
