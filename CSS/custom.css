@@ -8,7 +8,6 @@ body {
 }
 .display-on {
     display: block;
-    transition: all 2s linear;
 }
 .display-off {
     display: none;
