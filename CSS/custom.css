@@ -103,30 +103,29 @@ h1 {
 }
 #green {
     background: url(../images/green.png);
-    background-size: contain;
-    background-repeat: no-repeat;
     display: none;
 }
 #red {
     background: url(../images/red.png);
-    background-size: contain;
-    background-repeat: no-repeat;
     display: none;
 }
  /* KEKOS */
  .character {
      position: absolute;
      z-index: 1;
+     display: none;
  }
  .caco {
     background: url(../images/caco.png);
      background-size: contain;
      background-repeat: no-repeat;
+     
  }
  .police {
     background: url(../images/police.png);
     background-size: contain;
     background-repeat: no-repeat;
+   
  }
  #character0 {
     top: 480px;
@@ -221,11 +220,11 @@ h1 {
      width: 25vw;
      height: 25vh;
      background: url(../images/shot.png);
-     background-size: contain;
-     background-repeat: no-repeat;
      left: 45%;
      top: 65%;
      display: none;
+     background-size: contain;
+     background-repeat: no-repeat;
  }
 
 .hit {
@@ -234,37 +233,25 @@ h1 {
     width: 3vw;
     height: 3vh;
     background: url(../images/hit2.png);
-    background-size: contain;
-    background-repeat: no-repeat;
     display: none;
 }
  /* INTERFAZ */
-.horse-luis {
-    position: absolute;
-    background: url(../images/horsehead.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#interface {
+.interface {
     position: absolute;
     z-index: 4;
-    top: calc(100% - 90px);
     width: 20vw;
-    height: 12vh;
-    background-color: rgba(168, 184, 219, 0.5);
+    height: 10vh;
     box-shadow: inset 0px 0px 16px 1px rgba(0,0,0,0.75);
+}
+#interface {
+    top: calc(100% - 90px);  
+    background-color: rgba(168, 184, 219, 0.5);
     padding-left: 20px;
 }
 #interface-r {
-    position: absolute;
-    z-index: 4;
     top: calc(100% - 90px);
     left: calc(100% - 20vw);
-    width: 20vw;
-    height: 12vh;
     background-color: rgba(219, 168, 175, 0.5);
-    box-shadow: inset 0px 0px 16px 1px rgba(0,0,0,0.75);
     padding-right: 20px;
 }
 .bullet {
@@ -273,22 +260,21 @@ h1 {
     width: 30px;
     height: 50px;
     background: url(../images/cartucho.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: calc(6vh - 25px);
+    margin-top: calc(6vh - 32px);
 }
 .horsehead {
     float: right;
     width: 70px;
     height: 50px;
-    margin-left: 5px;
+    margin-left: 7px;
     background: url(../images/horsehead.png);
+    margin-top: calc(6vh - 32px);  
+}
+
+.background-cover {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: calc(6vh - 25px);
 }
-
 
 
