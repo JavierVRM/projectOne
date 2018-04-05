@@ -1,6 +1,7 @@
 function Intro(game) {
     this.game = game;
     this.globalFadeIn();
+    this.gameOverLoad();
 };
   
 Intro.prototype.globalFadeIn = function (){
@@ -25,6 +26,11 @@ Intro.prototype.instructionsAdvance = function () {
 };
 Intro.prototype.playAgain = function () {
     location.href = "stage.html";
+};
+Intro.prototype.gameOverLoad = function () {
+    setTimeout(function(){
+        $(".game-over-container").css("visibility", "visible");  
+    },2000)
 }
         
 

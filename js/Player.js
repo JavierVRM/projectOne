@@ -46,16 +46,23 @@ Player.prototype.reloadWeapon = function() {
   }, 1000);
 };
 
-Player.prototype.shotAudio = function play (title) {
+Player.prototype.shotAudio = function (title) {
     $("<audio>", {
         src: title
     }).each(function () {
         this.play();
     });
 }
-Player.prototype.gameOverAudio = function play (title) {
-  
-}
+
+// Player.prototype.gameOverAudio = function play (title) {
+//   $( ".game-over-container" ).load(function() {
+//     $("<audio>", {
+//       src: title
+//     }).each(function () {
+//         this.play();
+//     });
+//   });
+// }
 
 Player.prototype.shotAnimation = function() {
   $("#shoot").fadeIn(50, function() {

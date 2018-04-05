@@ -27,7 +27,7 @@ body {
 /* INDEX /////////////////////////////////*/
 h1 {
     font-family: 'Nosifer', regular;
-    font-size: 6rem;
+    font-size: 8rem;
     color: rgb(235, 235, 235);
 }
 #index-text {
@@ -166,7 +166,7 @@ h1 {
     height: 16vh;
  }
  #character7 {
-    top: 65%;
+    top: 62%;
     left: 10%;
     width:3vw;
     height: 12vh;
@@ -281,6 +281,7 @@ h1 {
     align-items: center;
     justify-content: space-between;
     padding: 100px;
+    visibility: hidden;
 }
 
 .game-over-container h2 {
@@ -298,11 +299,21 @@ h1 {
     /*  */
 }
 .play-again:hover {
-    box-shadow: inset 0px 0px 16px 1px rgba(0,0,0,0.75);
+    font-size: 2.1rem;
 }
 .background-cover {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+#kiss {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 4rem;
+    color: white;
+    z-index: -1;
+    position: absolute;
+    top: 40%;
+    left: 18%;
+    width: 100vw;
 }
 

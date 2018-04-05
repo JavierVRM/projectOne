@@ -25,7 +25,6 @@ Items.prototype.assignCharacter = function() {
     randomNumber++;
   }, 700);
 };
-
 Items.prototype.removeCharacter = function() {
   var totalHorseheads = 0;
   $(".police").click(function() {
@@ -50,3 +49,5 @@ Items.prototype.removeCharacter = function() {
     }
   });
 };
+
+
