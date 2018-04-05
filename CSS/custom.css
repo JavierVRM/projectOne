@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 body {
-    display: none;
     background-color: rgb(22,22,22);
 }
 .display-on {
@@ -29,6 +28,9 @@ h1 {
     font-family: 'Nosifer', regular;
     font-size: 8rem;
     color: rgb(235, 235, 235);
+}
+#index-container {
+    display: none;
 }
 #index-text {
     position: absolute;
@@ -56,23 +58,42 @@ h1 {
     line-height: 3.5rem;
     color: rgb(235, 235, 235); 
   }
+ .start {
+     top: 50%;
+     left: 65%;
+     color: rgb(235, 235, 235); 
+     font-size: 45px;
+     position: absolute;
+ }
 .paragraph {
     position: absolute;
     left: 50%;
     padding-right: 2%;
     margin-top: 5%;  
 }
+#instructions-container {
+    display: none;
+}
 #instructions-img img {
      height: 90vh;
      bottom: 0;
      position: absolute;
 }
-
+#play-new {
+    position: absolute;
+    font-size: 5rem;
+    left: 50%;
+    top: 30%;
+    text-decoration: underline;
+    border-radius: 25%;
+    padding: 40px;
+}
 
  /* STAGE /////////////////////////////////*/
  .stage-container {
      width: 100vw;
      height: 100vh; 
+     display: none;
      position: relative; 
  }
 
@@ -237,13 +258,13 @@ h1 {
 .interface {
     position: absolute;
     z-index: 4;
-    width: 20vw;
     height: 10vh;
     box-shadow: inset 0px 0px 16px 1px rgba(0,0,0,0.75);
     border-radius: 10px;
 }
 #interface {
     top: calc(100% - 90px);  
+    width: 20vw;
     left: 1vw;
     background-color: rgba(223, 191, 105, 0.5);
     padding-left: 23px;
@@ -251,7 +272,7 @@ h1 {
 #interface-r {
     top: calc(100% - 90px);
     left: calc(100% - 21vw);
-    background-color: rgba(70, 71, 73, 0.5);
+    width: 20vw;
     padding-right: 10px;
 }
 .bullet {
@@ -277,6 +298,7 @@ h1 {
     width: 100vw;
     height: 100vh;
     display: flex;
+    opacity: 0;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -288,19 +310,19 @@ h1 {
     font-size: 7rem;
     text-shadow: 2px 0 0 #700d0d, -2px 0 0 #700d0d, 0 2px 0 #700d0d, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
-.play-again {
-    background-color: rgba(255,255,255, 0.3);
-    border: 2px solid rgba(151, 39, 39, 0.7);
-    padding: 30px 50px;
-    border-radius: 40px;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 2rem;
+.play {
     color: rgb(151, 39, 39);
-    /*  */
+    font-family: 'Press Start 2P', cursive;
+    
 }
-.play-again:hover {
-    font-size: 2.1rem;
+#play-again {
+    font-size: 2rem;
+    background-color: rgba(255,255,255, 0.3);
+    padding: 30px 50px;
+    border: 2px solid rgba(151, 39, 39, 0.7);
+    border-radius: 40px;
 }
+
 .background-cover {
     background-size: contain;
     background-repeat: no-repeat;

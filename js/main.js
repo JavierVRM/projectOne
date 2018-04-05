@@ -12,7 +12,7 @@ $("document").ready(function() {
     $("#instructions-container").click(function(){
         game.intro.instructionsAdvance();
     });
-    $(".play-again").click(function(){
+    $(".play").click(function(){
         game.intro.playAgain();
     });
     // document.getElementsByClassName("stage-container")[0].addEventListener("click", function(event){

@@ -5,8 +5,14 @@ function Intro(game) {
 };
   
 Intro.prototype.globalFadeIn = function (){
-    $("body").css("display", function() {
-        $(this).fadeIn(1000);
+    $("#index-container").css("display", function() {
+        $(this).fadeIn(8000);
+    });
+    $("#instructions-container").css("display", function() {
+        $(this).fadeIn(2000);
+    });
+    $(".stage-container").css("display", function() {
+        $(this).fadeIn(3000);
     });
 };
 
@@ -29,9 +35,9 @@ Intro.prototype.playAgain = function () {
 };
 Intro.prototype.gameOverLoad = function () {
     setTimeout(function(){
-        $(".game-over-container").css("visibility", "visible");  
-    },2000)
-}
+        $(".game-over-container").css("visibility", "visible").animate({opacity: 1})  
+    },1100)
+};
         
 
 
