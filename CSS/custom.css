@@ -5,12 +5,16 @@
 }
 body {
     display: none;
+    background-color: rgb(22,22,22);
 }
 .display-on {
     display: block;
 }
 .display-off {
     display: none;
+}
+.pointer-events {
+    pointer-events: none;
 }
 .container {
     background: rgb(22,22,22);
@@ -19,8 +23,8 @@ body {
     /* border: 1px dotted orange; */
 }
 
-/* MAIN /////////////////////////////////*/
 
+/* INDEX /////////////////////////////////*/
 h1 {
     font-family: 'Nosifer', regular;
     font-size: 6rem;
@@ -45,15 +49,12 @@ h1 {
     width: 80vw;
     bottom: 0;
 }
-
- /* INTRO /////////////////////////////////*/
-
+ /* INSTRUCTIONS /////////////////////////////////*/
  h2 {
     font-family: 'Press Start 2P', cursive;
     font-size: 2.5rem;
     line-height: 3.5rem;
-    color: rgb(235, 235, 235);
-   
+    color: rgb(235, 235, 235); 
   }
 .paragraph {
     position: absolute;
@@ -67,8 +68,8 @@ h1 {
      position: absolute;
 }
 
- /* STAGE /////////////////////////////////*/
 
+ /* STAGE /////////////////////////////////*/
  .stage-container {
      width: 100vw;
      height: 100vh; 
@@ -96,18 +97,14 @@ h1 {
     z-index: 6;
     position: absolute;
     pointer-events: none;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%; 
     opacity: 0.7;
 }
-#green {
-    background: url(../images/green.png);
-    display: none;
+.colors img {
+    width: 100%;
 }
-#red {
-    background: url(../images/red.png);
-    display: none;
-}
+
  /* KEKOS */
  .character {
      position: absolute;
@@ -127,72 +124,70 @@ h1 {
    
  }
  #character0 {
-    top: 480px;
-    left: 335px;
-    width:3vw;
-    height: 15vh;
- }
-
- #character1 {
     top: 200px;
     left: 550px;
     width:4vw;
     height: 20vh;
  }
- #character2 {
+ #character1 {
     top: 450px;
     left: 700px;
     width:4vw;
     height: 18vh;
  }
- #character3 {
+ #character2 {
     top: 465px;
     left: 865px;
     width:4vw;
     height: 19vh;
  }
- #character4 {
+ #character3 {
     top: 475px;
     left: 1110px;
     width:4vw;
     height: 14vh;
  }
- #character5 {
+ #character4 {
     top: 480px;
     left: 400px;
     width:4vw;
     height: 18vh;
  }
- #character6 {
-    top: 210px;
-    left: 600px;
+ #character5 {
+    top: 220px;
+    left: 660px;
     width:4vw;
     height: 17vh;
  }
- #character7 {
+ #character6 {
     top: 470px;
     left: 990px;
     width:4vw;
     height: 16vh;
  }
- #character8 {
-    top: 490px;
-    left: 180px;
+ #character7 {
+    top: 60%;
+    left: 10%;
     width:3vw;
     height: 12vh;
  }
- #character9 {
+ #character8 {
     top: 480px;
     left: 1160px;
     width:3vw;
     height: 11vh;
+ }
+ #character9{
+    top: 460px;
+    left: 580px;
+    width:5vw;
+    height: 19vh;
  }
 
  /* WEAPONS */
  .weapon {
      z-index: 5;
      position: absolute;
-   
  }
  .reload {
      display: none;
@@ -201,10 +196,12 @@ h1 {
     left: calc(50% - 96px);
     top: 78%;
  }
+
  #main-weapon2 {
     left: calc(50% - 141px);
     top: calc(100% - 365px);
  }
+ 
  #main-weapon3 {
     left: calc(50% - 136.5px);
     top: calc(100% - 455px);
@@ -225,15 +222,17 @@ h1 {
      background-size: contain;
      background-repeat: no-repeat;
  }
-
 .hit {
     z-index: 5;
     position: absolute;
-    width: 3vw;
-    height: 3vh;
-    background: url(../images/hit2.png);
+    width: 60px;
+    height: 60px;
+    opacity: 0.8;
+    background: url(../images/hit.png);
+    background-size: cover;
     display: none;
 }
+
  /* INTERFAZ */
 .interface {
     position: absolute;
@@ -241,39 +240,64 @@ h1 {
     width: 20vw;
     height: 10vh;
     box-shadow: inset 0px 0px 16px 1px rgba(0,0,0,0.75);
+    border-radius: 10px;
 }
 #interface {
     top: calc(100% - 90px);  
-    background-color: rgba(168, 184, 219, 0.5);
-    padding-left: 20px;
+    left: 1vw;
+    background-color: rgba(223, 191, 105, 0.5);
+    padding-left: 23px;
 }
 #interface-r {
     top: calc(100% - 90px);
-    left: calc(100% - 20vw);
-    background-color: rgba(219, 168, 175, 0.5);
-    padding-right: 20px;
+    left: calc(100% - 21vw);
+    background-color: rgba(70, 71, 73, 0.5);
+    padding-right: 10px;
 }
 .bullet {
     float: left;
     z-index: 5;
-    width: 30px;
+    width: 60px;
     height: 50px;
-    background: url(../images/cartucho.png);
+    background: url(../images/shotgun-bullet.png);
     margin-top: calc(6vh - 32px);
 }
 .horsehead {
     float: right;
-    width: 70px;
-    height: 50px;
-    margin-left: 7px;
-    background: url(../images/horsehead.png);
-    margin-top: calc(6vh - 32px);  
+    width: 100px;
+    height: 80px;
+    margin-left: -20px;
+    background: url(../images/horse-head.png);
+    margin-top: 5px;  
 }
 
+/* GAME OVER */
+.game-over-container {
+    background: url(../images/kiss.png);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+}
+
+.game-over-container h2 {
+    font-size: 7rem;
+    text-shadow: 2px 0 0 #700d0d, -2px 0 0 #700d0d, 0 2px 0 #700d0d, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+.game-over-container h4 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    color: #972727;
+}
+.play-again {
+    
+}
 .background-cover {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
-
 

@@ -1,48 +1,33 @@
-// function Items (game) {
-//     this.game = game;
-// }
-
-// CHARACTER CREATE
-function createCharacter() {
-  for (var i = 0; i < 10; i++) {
-    $("<div class='character' id='character`${></div>").appendTo(
-      "#interface-r"
-    );
-  }
+function Items(game) {
+  this.game = game;
+  this.drawCharacter();
+  this.assignCharacter();
+  this.removeCharacter();
 }
 
-// CHARACTER ASIGN
-function characterAssign() {
+Items.prototype.drawCharacter = function() {
+  for (var i = 0; i < 10; i++) {
+    $("<div class='character' id='character" + i + "'></div>").appendTo(
+      ".stage-container"
+    );
+  }
+};
+
+Items.prototype.assignCharacter = function() {
   var randomNumber = 0;
   var totalCharacters = document.getElementsByClassName("character");
   for (var i = 0; i < totalCharacters.length; i = i + 2) {
     $("#character" + i).addClass("caco");
     $("#character" + (i + 1)).addClass("police");
   }
-
   setInterval(function() {
-    var newRandomNumber = Math.floor(Math.random() * totalCharacters.length);
-    if (newRandomNumber != randomNumber) {
-      randomNumber = newRandomNumber;
-      $("#character" + newRandomNumber).css("display", "block");
-    }
+    $("#character" + randomNumber).css("display", "block");
+    randomNumber++;
+  }, 700);
+};
 
-    // var totalCharacters = document.getElementsByClassName("character");
-    // var randomNumber = Math.floor(Math.random() * 10);
-    // for (var i = 0; i < totalCharacters.length; i++) {
-    //     if (randomNumber % 2 === 0) {
-    //         totalCharacters[i].classList.add("caco");
-    //     } else {
-    //         totalCharacters[i].classList.add("police");
-    //     }
-    // }
-  }, 1200);
-}
-characterAssign();
-
-// CHARACTER SHOOTED
-var totalHorseheads = 0;
-function characterHitted() {
+Items.prototype.removeCharacter = function() {
+  var totalHorseheads = 0;
   $(".police").click(function() {
     $(this).removeClass("police");
     $("#green").fadeIn(300, function() {
@@ -55,15 +40,13 @@ function characterHitted() {
       "#interface-r"
     );
     $(this).removeClass("caco");
-
     $("#red").fadeIn(300, function() {
       $("#red").fadeOut(100);
     });
     if (totalHorseheads == 3) {
       setTimeout(function() {
-        alert("insert gameOver here");
+        document.location = "game-over.html"
       }, 500);
     }
   });
-}
-characterHitted();
+};

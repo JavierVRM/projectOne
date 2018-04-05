@@ -15,16 +15,15 @@ Intro.prototype.frontPageAdvance = function () {
 
 Intro.prototype.instructionsAdvance = function () {
     var displayed = $(".display-on").next();
+    if ($(".paragraph").hasClass("display-on")) {
+        $(".display-on").removeClass("display-on").addClass("display-off");
+        displayed.removeClass("display-off").addClass("display-on");
+    } else {
+        location.href = "stage.html";
+    } 
     console.log(displayed)
 };
-    
-// if ($(".paragraph").hasClass("display-on")) {
-    //         var displayed = $(".display-on").next();
-    //         $(".display-on").removeClass("display-on").addClass("display-off")
-    //         displayed.removeClass("display-off").addClass("display-on");
-    //     } else {
-    //         location.href = "stage.html";
-    //     } 
+        
 
 
 

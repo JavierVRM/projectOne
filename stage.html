@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rat´s Nest</title>
+    <title>Stage</title>
     <link rel="stylesheet" href="css/custom.css">
     <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <script src="lib/jquery.js"></script>
+    <script src="js/Intro.js"></script>
     <script src="js/Items.js"></script>
     <script src="js/Player.js"></script>
     <script src="js/Game.js"></script>
-    <script src="js/Intro.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -23,16 +23,6 @@
         <div class="background" id="background-front">
             <img src="images/back2.png" alt="">
         </div>
-        <div class="character" id="character0"></div>
-        <div class="character" id="character1"></div>
-        <div class="character" id="character2"></div>
-        <div class="character" id="character3"></div>
-        <div class="character" id="character4"></div>
-        <div class="character" id="character5"></div>
-        <div class="character" id="character6"></div>
-        <div class="character" id="character7"></div>
-        <div class="character" id="character8"></div>
-        <div class="character" id="character9"></div>
         <div class="background" id="background-back">
             <img src="images/back1.png" alt="">
         </div>
@@ -50,11 +40,15 @@
             <img src="images/weapon4.png" alt="">
         </div>
         <div class="background-cover" id="hit"></div>
-        <div class="colors background-cover" id="red"></div>
-        <div class="colors background-cover" id="green"></div>
+        <div class="colors display-off" id="red">
+            <img src="images/red-bg.png" alt="">
+        </div>
+        <div class="colors display-off" id="green">
+            <img src="images/green-bg.png" alt="">
+        </div>
         <div class="interface" id="interface"></div>
         <div class="interface" id="interface-r"></div>
-        
+        <div class="hit"></div>
     </div>
 </body>
 
