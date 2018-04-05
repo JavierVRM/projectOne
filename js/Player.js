@@ -45,12 +45,16 @@ Player.prototype.reloadWeapon = function() {
     $("#main-weapon").css("top", "78%");
   }, 1000);
 };
+
 Player.prototype.shotAudio = function play (title) {
     $("<audio>", {
         src: title
     }).each(function () {
         this.play();
     });
+}
+Player.prototype.gameOverAudio = function play (title) {
+  
 }
 
 Player.prototype.shotAnimation = function() {
