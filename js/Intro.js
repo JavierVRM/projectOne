@@ -23,6 +23,9 @@ Intro.prototype.instructionsAdvance = function () {
     } 
     console.log(displayed)
 };
+Intro.prototype.playAgain = function () {
+    location.href = "stage.html";
+}
         
 
 

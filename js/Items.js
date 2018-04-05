@@ -29,7 +29,7 @@ Items.prototype.assignCharacter = function() {
 Items.prototype.removeCharacter = function() {
   var totalHorseheads = 0;
   $(".police").click(function() {
-    $(this).removeClass("police");
+    $(this).css("display","none");
     $("#green").fadeIn(300, function() {
       $("#green").fadeOut(100);
     });
@@ -39,7 +39,7 @@ Items.prototype.removeCharacter = function() {
     $("<div class='horsehead background-cover'></div>").appendTo(
       "#interface-r"
     );
-    $(this).removeClass("caco");
+    $(this).css("display","none");
     $("#red").fadeIn(300, function() {
       $("#red").fadeOut(100);
     });

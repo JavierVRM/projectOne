@@ -12,6 +12,7 @@ Player.prototype.drawBullets = function() {
 };
 
 Player.prototype.hitEffect = function () { 
+  
     $(".hit").css("display", "block" );
     $(".hit").css("left", event.x - 30 );
     $(".hit").css("top", event.y  - 30);
@@ -44,20 +45,27 @@ Player.prototype.reloadWeapon = function() {
     $("#main-weapon").css("top", "78%");
   }, 1000);
 };
+Player.prototype.shotAudio = function play (title) {
+    $("<audio>", {
+        src: title
+    }).each(function () {
+        this.play();
+    });
+}
 
 Player.prototype.shotAnimation = function() {
   $("#shoot").fadeIn(50, function() {
-    $("#main-weapon2").fadeIn(100, function() {
-      $("#main-weapon2").fadeOut(100);
-      $("#main-weapon3").fadeIn(100, function() {
-        $("#shoot").fadeOut(100);
-        $("#main-weapon3").fadeOut(100);
-        $("#main-weapon4").fadeIn(100, function() {
-          $("#main-weapon4").fadeOut(100);
-          $("#main-weapon3").fadeIn(100, function() {
-            $("#main-weapon3").fadeOut(100);
-            $("#main-weapon2").fadeIn(100, function() {
-              $("#main-weapon2").fadeOut(100);
+    $("#main-weapon2").fadeIn(160, function() {
+      $("#main-weapon2").fadeOut(160);
+      $("#main-weapon3").fadeIn(160, function() {
+        $("#shoot").fadeOut(160);
+        $("#main-weapon3").fadeOut(160);
+        $("#main-weapon4").fadeIn(160, function() {
+          $("#main-weapon4").fadeOut(160);
+          $("#main-weapon3").fadeIn(160, function() {
+            $("#main-weapon3").fadeOut(160);
+            $("#main-weapon2").fadeIn(160, function() {
+              $("#main-weapon2").fadeOut(160);
             });
           });
         });
