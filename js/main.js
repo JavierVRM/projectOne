@@ -15,14 +15,5 @@ $("document").ready(function() {
     $(".play").click(function(){
         game.intro.playAgain();
     });
-    // document.getElementsByClassName("stage-container")[0].addEventListener("click", function(event){
-    //     console.log(event);
-    //     $(".hit").css("display", "block" );
-    //     $(".hit").css("left", event.x - 30 );
-    //     $(".hit").css("top", event.y  - 30);
-    //     setTimeout(function(){
-    //         $(".hit").css("display", "none" );
-    //     },500)
-    // }); 
 });
 

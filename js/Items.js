@@ -3,6 +3,7 @@ function Items(game) {
   this.drawCharacter();
   this.assignCharacter();
   this.removeCharacter();
+  this.randomNumber = 0;
 }
 
 Items.prototype.drawCharacter = function() {
@@ -14,16 +15,15 @@ Items.prototype.drawCharacter = function() {
 };
 
 Items.prototype.assignCharacter = function() {
-  var randomNumber = 0;
   var totalCharacters = document.getElementsByClassName("character");
   for (var i = 0; i < totalCharacters.length; i = i + 2) {
     $("#character" + i).addClass("caco");
     $("#character" + (i + 1)).addClass("police");
   }
   setInterval(function() {
-    $("#character" + randomNumber).css("display", "block");
-    randomNumber++;
-  }, 700);
+    $("#character" + this.randomNumber).css("display", "block");
+    this.randomNumber++;
+  }.bind(this), 700);
 };
 
 Items.prototype.removeCharacter = function() {
@@ -33,6 +33,9 @@ Items.prototype.removeCharacter = function() {
     $("#green").fadeIn(300, function() {
       $("#green").fadeOut(100);
     });
+    setTimeout(function(){
+      $(this).css("display","block");
+    }.bind(this),2000)
   });
   $(".caco").click(function() {
     totalHorseheads++;
@@ -43,6 +46,9 @@ Items.prototype.removeCharacter = function() {
     $("#red").fadeIn(300, function() {
       $("#red").fadeOut(100);
     });
+    setTimeout(function(){
+      $(this).css("display","block");
+    }.bind(this),2000)
     if (totalHorseheads == 3) {
       setTimeout(function() {
         document.location = "game-over.html"

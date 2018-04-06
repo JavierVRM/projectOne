@@ -139,7 +139,7 @@ h1 {
      
  }
  .police {
-    background: url(../images/police.png);
+    background: url(../images/policeman.png);
     background-size: contain;
     background-repeat: no-repeat;
    
@@ -270,6 +270,8 @@ h1 {
     padding-left: 23px;
 }
 #interface-r {
+    position: absolute;
+    z-index: 4;
     top: calc(100% - 90px);
     left: calc(100% - 21vw);
     width: 20vw;
@@ -288,8 +290,7 @@ h1 {
     width: 100px;
     height: 80px;
     margin-left: -20px;
-    background: url(../images/horse-head.png);
-    margin-top: 5px;  
+    background: url(../images/horse-head.png); 
 }
 
 /* GAME OVER */
@@ -321,6 +322,11 @@ h1 {
     padding: 30px 50px;
     border: 2px solid rgba(151, 39, 39, 0.7);
     border-radius: 40px;
+}
+#play-again:hover {
+    box-shadow: inset 0 0 5px 5px rgba(0,0,0,0.2);
+    background-color: rgba(255,255,255, 0.5);
+    text-shadow: 0 -1px 0 black,  -1px 0 0 black, -1px 0 0 black;
 }
 
 .background-cover {
