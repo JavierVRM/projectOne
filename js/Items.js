@@ -16,7 +16,7 @@ Items.prototype.drawCharacter = function() {
 
 Items.prototype.assignCharacter = function() {
   var totalCharacters = document.getElementsByClassName("character");
-  for (var i = 0; i < totalCharacters.length; i = i + 2) {
+  for (var i = 0; i < totalCharacters.length; i = i+2) {
     $("#character" + i).addClass("caco");
     $("#character" + (i + 1)).addClass("police");
   }
@@ -34,6 +34,7 @@ Items.prototype.removeCharacter = function() {
       $("#green").fadeOut(100);
     });
     setTimeout(function(){
+      
       $(this).css("display","block");
     }.bind(this),2000)
   });

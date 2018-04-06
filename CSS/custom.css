@@ -151,10 +151,10 @@ h1 {
     height: 20vh;
  }
  #character1 {
-    top: 450px;
-    left: 700px;
-    width:4vw;
-    height: 18vh;
+    top: 62%;
+    left: 10%;
+    width:3vw;
+    height: 12vh;
  }
  #character2 {
     top: 465px;
@@ -187,10 +187,11 @@ h1 {
     height: 16vh;
  }
  #character7 {
-    top: 62%;
-    left: 10%;
-    width:3vw;
-    height: 12vh;
+    top: 450px;
+    left: 700px;
+    width:4vw;
+    height: 18vh;
+    
  }
  #character8 {
     top: 480px;
